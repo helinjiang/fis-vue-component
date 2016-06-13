@@ -9,7 +9,6 @@ var Bar = Vue.extend({
     template: '<p>This is bar!</p>'
 });
 
-var NotFound = require('./not-found');
 
 export function configRouter(router) {
 
@@ -24,12 +23,16 @@ export function configRouter(router) {
         },
 
         '/404': {
-            component: NotFound
+            component: require('./not-found')
+        },
+
+        '/button': {
+            component: require('./button')
         },
 
         // not found handler
         '*': {
-            component: require('./not-found')
+            component: require('./about')
         }
     });
 
