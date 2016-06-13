@@ -11,11 +11,16 @@
 
 <body>
 <div id="app">
-    <div v-text="test">xxx</div>
-    <my-component></my-component>
-    <he-button>zzz</he-button>
+    <h1>Hello App!</h1>
+    <p>
+        <!-- use v-link directive for navigation. -->
+        <a v-link="{ path: '/foo' }">Go to Foo</a>
+        <a v-link="{ path: '/bar' }">Go to Bar</a>
+        <a v-link="{ path: '/404' }">Go to 404</a>
+    </p>
+    <!-- use router-view element as route outlet -->
+    <router-view></router-view>
 </div>
-<!--container end-->
 
 <script type="text/javascript" src="/static/lib/jquery.min.js"></script><!--ignore-->
 <script type="text/javascript" src="/static/lib/mod.js"></script>

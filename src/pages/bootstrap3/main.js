@@ -1,27 +1,26 @@
-var Vue = require('/common/lib/vue');
+import Vue from '/common/lib/vue'
+import VueRouter from '/common/lib/vue-router'
+import {configRouter} from './route-config'
 
-var Button = require('/components/bootstrap3/button');
-var MyComponent2 = Vue.extend(Button);
-Vue.component('he-button', MyComponent2);
+// install router
+Vue.use(VueRouter);
 
-// 定义
-var MyComponent = Vue.extend({
-    template: '<div>A custom component!</div>'
-})
-
-// 注册
-Vue.component('my-component', MyComponent);
-
-window.app = new Vue({
-    el: '#app',
-    data:{
-        test:'iam test'
-    },
-    // components: {
-    //     Button
-    // },
-    ready: function () {
-
-    }
+// create router
+const router = new VueRouter({
+    history: true,
+    saveScrollPosition: true
 });
 
+// configure router
+configRouter(router);
+
+// boostrap the app
+const App = Vue.extend({});
+
+// now we can start the app!
+// router will create an instance of App and mount to
+// the element matching the selector #app.
+router.start(App, '#app');
+
+// just for debugging
+window.router = router;

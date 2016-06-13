@@ -1,2 +1,5 @@
 # fis-vue-component
 使用fis构建的基于vue的组件库
+
+## 说明
+本组件的 `bootstrap3` 组件模块，参考了 [vuebootstrap](https://github.com/marchFantasy/vuebootstrap)，并作了适当修改。
