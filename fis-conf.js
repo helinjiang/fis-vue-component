@@ -30,7 +30,7 @@ fis.hook('commonjs');
 /**
  * 对 js 进行组件化处理
  */
-fis.match('/{pages,modules,components}/**.js', {
+fis.match('/{pages,modules,components,common}/**.js', {
     isMod: true
 });
 
@@ -44,6 +44,13 @@ fis.match('/static/plugins/**.js', {
 noMod.forEach(function (item) {
     fis.match(item, {isMod: false});
 });
+
+fis.match('/{pages,modules,common}/**.js', {
+    parser: fis.plugin('babel')
+})
+    .match('/common/lib/**.js', {
+        parser: null
+    })
 
 /**
  * 处理scss和css
