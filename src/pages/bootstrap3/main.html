@@ -7,28 +7,43 @@
 
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="./main.scss">
+
 </head>
 
 <body>
-<div id="app">
-    <h1>Hello App!</h1>
-    <p>
-        <!-- use v-link directive for navigation. -->
-        <a v-link="{ path: '/foo' }">Go to Foo</a>
-        <a v-link="{ path: '/bar' }">Go to Bar</a>
-        <a v-link="{ path: '/404' }">Go to 404</a>
-    </p>
-    <!-- use router-view element as route outlet -->
-    <router-view></router-view>
+
+<div id="app" class="container">
+
+    <div class="jumbotron">
+        <h1>Bootstrap 3.x 的 vue 组件</h1>
+        <p>使用fis3构建</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- use v-link directive for navigation. -->
+            <a class="btn btn-info" v-link="{ path: '/foo' }">Go to Foo</a>
+            <a class="btn btn-info" v-link="{ path: '/bar' }">Go to Bar</a>
+            <a class="btn btn-info" v-link="{ path: '/404' }">Go to 404</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- use router-view element as route outlet -->
+            <router-view></router-view>
+        </div>
+    </div>
+
 </div>
 
 <script type="text/javascript" src="/static/lib/jquery.min.js"></script><!--ignore-->
 <script type="text/javascript" src="/static/lib/mod.js"></script>
-<script type="text/javascript" src="./main.js"></script>
 
 <script type="text/javascript">
-    require('./main');
+    require('./main').init();
 </script>
+
 </body>
 </html>
 
