@@ -24,11 +24,6 @@ module.exports = {
             type: String,
             default: "button"
         },
-        'onClick': {
-            type: Function,
-            default: ()=> {
-            }
-        },
         'disabled': {
             type: Boolean,
             default: false
