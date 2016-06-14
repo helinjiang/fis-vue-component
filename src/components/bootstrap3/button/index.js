@@ -8,7 +8,7 @@
  *
  */
 
-import BsMixin from '../_mixin/bsMixin.js';
+import BsMixin from '../_mixin/bsMixin';
 
 export default {
     template: __inline('main.html'),

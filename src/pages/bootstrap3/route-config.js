@@ -14,6 +14,10 @@ export function configRouter(router) {
             component: require('./buttonGroup')
         },
 
+        '/label': {
+            component: require('./label')
+        },
+
         '*': {
             component: require('./about')
         }
