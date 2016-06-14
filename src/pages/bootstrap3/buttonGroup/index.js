@@ -8,10 +8,5 @@ export default {
     components: {
         Bs3ButtonGroup,
         Bs3Button
-    },
-    methods: {
-        clickButton() {
-            alert('this is button');
-        }
     }
 };

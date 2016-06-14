@@ -3,7 +3,7 @@
  *
  * @param type button,submit
  * @param bsStyle default,primary,success,info,warning,danger,link
- * @param bsSize lg,xs,sm
+ * @param size lg,xs,sm
  * @param disabled
  *
  */

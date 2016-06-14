@@ -4,7 +4,7 @@ module.exports = {
             type: String,
             default: 'default'
         },
-        bsSize: {
+        size: {
             type: String,
             default: 'md'
         }
@@ -28,8 +28,8 @@ module.exports = {
 
             }
             //大小，例如：btn-sm
-            if (self.bsSize && self.bsSize !== 'md') {
-                self.classes[self.tag + character + self.bsSize] = true;
+            if (self.size && self.size !== 'md') {
+                self.classes[self.tag + character + self.size] = true;
             }
 
         }

@@ -6,10 +6,5 @@ export default {
     mixins: [BaseMixin],
     components: {
         Bs3Button
-    },
-    methods: {
-        clickButton() {
-            alert('this is button');
-        }
     }
 };
