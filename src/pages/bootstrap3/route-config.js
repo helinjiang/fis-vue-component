@@ -18,6 +18,10 @@ export function configRouter(router) {
             component: require('./label')
         },
 
+        '/panel': {
+            component: require('./panel')
+        },
+
         '*': {
             component: require('./about')
         }

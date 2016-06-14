@@ -1,0 +1,11 @@
+<div :class="classes">
+    <div class="panel-heading">
+        <slot name="panel-header"></slot>
+    </div>
+
+    <div class="panel-body">
+        <slot></slot>
+    </div>
+
+    <slot name="panel-extend"></slot>
+</div>

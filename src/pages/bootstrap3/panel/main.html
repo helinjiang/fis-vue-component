@@ -1,0 +1,165 @@
+<div>
+    <div class="back">
+        <a class="btn btn-link" v-link="{ path: '/about' }">返回首页</a>
+    </div>
+
+    <h2>Panel 面板</h2>
+
+    <h3>1. 使用</h3>
+    <p>略</p>
+
+    <h3>2. 选项配置</h3>
+
+    <section>
+        <h4>2.1 slot</h4>
+        <p>Panel 面板组件包含三块 <code>slot</code>，分别是：</p>
+        <ul>
+            <li><code>（省略）</code>：不设置 slot 的默认为 <code>.panel-body</code> 中的内容</li>
+            <li><code>panel-header</code>：<code>.panel-heading</code> 中的内容</li>
+            <li><code>panel-extend</code>：紧跟在 <code>.panel-body</code> 后的内容</li>
+        </ul>
+
+        <div class="bs-example">
+            <bs3-panel>
+                <div slot="panel-header">标题</div>
+                <div>panel 中的内容</div>
+            </bs3-panel>
+
+            <bs3-panel>
+                <div slot="panel-header">带表格的面版</div>
+                <p>为面板中不需要边框的表格添加 .table 类，是整个面板看上去更像是一个整体设计。如果是带有 .panel-body 的面板，我们为表格的上方添加一个边框，看上去有分隔效果。</p>
+
+                <table class="table" slot="panel-extend">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </bs3-panel>
+
+            <bs3-panel>
+                <div slot="panel-header">带列表组的面版</div>
+                <p>可以简单地在任何面版中加入具有最大宽度的列表组。</p>
+
+                <ul class="list-group" slot="panel-extend">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </bs3-panel>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-panel bs-style="primary"&gt;
+        &lt;div slot="panel-header"&gt;标题&lt;/div&gt;
+        &lt;div&gt;Panel 内容&lt;/div&gt;
+        &lt;div slot="panel-extend"&gt;Extend 内容&lt;/div&gt;
+    &lt;/bs3-panel&gt;
+            </code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h4>2.1 bs-style</h4>
+        <p>（颜色）样式，<code>String</code>，非必须，可选值为：</p>
+        <ul>
+            <li><code>default</code>：默认值，默认样式</li>
+            <li><code>primary</code>：首选项</li>
+            <li><code>success</code>：成功</li>
+            <li><code>info</code>：一般信息</li>
+            <li><code>warning</code>：警告</li>
+            <li><code>danger</code>：危险</li>
+        </ul>
+
+        <div class="bs-example">
+            <bs3-panel bs-style="default">
+                <div slot="panel-header">标题</div>
+                <div>内容（默认样式）Default</div>
+            </bs3-panel>
+            <bs3-panel bs-style="primary">
+                <div slot="panel-header">标题</div>
+                <div>内容（首选项）Primary</div>
+            </bs3-panel>
+            <bs3-panel bs-style="success">
+                <div slot="panel-header">标题</div>
+                <div>内容（成功）Success</div>
+            </bs3-panel>
+            <bs3-panel bs-style="info">
+                <div slot="panel-header">标题</div>
+                <div>内容（一般信息）Info</div>
+            </bs3-panel>
+            <bs3-panel bs-style="warning">
+                <div slot="panel-header">标题</div>
+                <div>内容（警告）Warning</div>
+            </bs3-panel>
+            <bs3-panel bs-style="danger">
+                <div slot="panel-header">标题</div>
+                <div>内容（危险）Danger</div>
+            </bs3-panel>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-panel bs-style="default"&gt;
+        &lt;div slot="panel-header"&gt;标题&lt;/div&gt;
+        &lt;div&gt;内容（默认样式）Default&lt;/div&gt;
+    &lt;/bs3-panel&gt;
+
+    &lt;bs3-panel bs-style="primary"&gt;
+        &lt;div slot="panel-header"&gt;标题&lt;/div&gt;
+        &lt;div&gt;内容（首选项）Primary&lt;/div&gt;
+    &lt;/bs3-panel&gt;
+
+    &lt;bs3-panel bs-style="success"&gt;
+        &lt;div slot="panel-header"&gt;标题&lt;/div&gt;
+        &lt;div&gt;内容（成功）Success&lt;/div&gt;
+    &lt;/bs3-panel&gt;
+
+    &lt;bs3-panel bs-style="info"&gt;
+        &lt;div slot="panel-header"&gt;标题&lt;/div&gt;
+        &lt;div&gt;内容（一般信息）Info&lt;/div&gt;
+    &lt;/bs3-panel&gt;
+
+    &lt;bs3-panel bs-style="warning"&gt;
+        &lt;div slot="panel-header"&gt;标题&lt;/div&gt;
+        &lt;div&gt;内容（警告）Warning&lt;/div&gt;
+    &lt;/bs3-panel&gt;
+
+    &lt;bs3-panel bs-style="danger"&gt;
+        &lt;div slot="panel-header"&gt;标题&lt;/div&gt;
+        &lt;div&gt;内容（危险）Danger&lt;/div&gt;
+    &lt;/bs3-panel&gt;
+            </code></pre>
+        </div>
+    </section>
+
+
+
+</div>

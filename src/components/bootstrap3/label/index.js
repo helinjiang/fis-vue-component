@@ -1,5 +1,5 @@
 /**
- * button 按钮
+ * label 标签
  *
  * @param bsStyle default,primary,success,info,warning,danger
  *

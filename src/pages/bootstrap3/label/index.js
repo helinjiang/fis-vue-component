@@ -1,4 +1,4 @@
-import BaseMixin from '../_mixin/baseMixin.js'
+import BaseMixin from '../_mixin/baseMixin'
 import Bs3Label from '/components/bootstrap3/label'
 
 export default {

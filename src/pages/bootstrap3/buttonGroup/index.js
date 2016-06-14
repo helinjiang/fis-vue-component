@@ -1,4 +1,4 @@
-import BaseMixin from '../_mixin/baseMixin.js'
+import BaseMixin from '../_mixin/baseMixin'
 import Bs3ButtonGroup from '/components/bootstrap3/buttonGroup'
 import Bs3Button from '/components/bootstrap3/button'
 
