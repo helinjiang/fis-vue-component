@@ -1,8 +1,7 @@
-import Vue from '/common/lib/vue'
 import BaseMixin from '../_mixin/baseMixin.js'
 import Button from '/components/bootstrap3/button'
 
-export default Vue.extend({
+export default {
     template: __inline('main.html'),
     mixins: [BaseMixin],
     components: {
@@ -13,4 +12,4 @@ export default Vue.extend({
             alert('this is button');
         }
     }
-});
+};
