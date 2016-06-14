@@ -1,69 +1,77 @@
 <div>
-    <div class="row">
-        <div class="col-md-12">
-            <a class="btn btn-success" v-link="{ path: '/about' }">返回首页</a>
-        </div>
+    <div class="back">
+        <a class="btn btn-link" v-link="{ path: '/about' }">返回首页</a>
     </div>
 
-    <hr>
+    <h2>Button按钮</h2>
 
-    <h3>Button按钮</h3>
+    <h3>1. 使用</h3>
+    <pre><code class="js">
+    import Bs3Button from '/components/bootstrap3/button'
+
+    export default {
+        template: '&lt;div&gt;&lt;bs3-button bs-style="default"&gt;（默认样式）Default&lt;/bs3-button&gt;&lt;/div&gt;',
+        components: {
+            Bs3Button
+        }
+    };
+    </code></pre>
+
+    <h3>2. 选项配置</h3>
 
     <section>
-        <h4>1. bs-style</h4>
+        <h4>2.1 bs-style</h4>
         <p>（颜色）样式，默认值为 <code>default</code></p>
-        <button bs-style="default">（默认样式）Default</button>
-        <button bs-style="primary">（首选项）Primary</button>
-        <button bs-style="success">（成功）Success</button>
-        <button bs-style="info">（一般信息）Info</button>
-        <button bs-style="warning">（警告）Warning</button>
-        <button bs-style="danger">（危险）Danger</button>
-        <button bs-style="link">（链接）Link</button>
+        <bs3-button bs-style="default">（默认样式）Default</bs3-button>
+        <bs3-button bs-style="primary">（首选项）Primary</bs3-button>
+        <bs3-button bs-style="success">（成功）Success</bs3-button>
+        <bs3-button bs-style="info">（一般信息）Info</bs3-button>
+        <bs3-button bs-style="warning">（警告）Warning</bs3-button>
+        <bs3-button bs-style="danger">（危险）Danger</bs3-button>
+        <bs3-button bs-style="link">（链接）Link</bs3-button>
 
         <pre><code class="html">
-    &lt;!-- Standard button --&gt;
-    &lt;button bs-style="default"&gt;（默认样式）Default&lt;/button&gt;
+    &lt;!-- Standard bs3-button --&gt;
+    &lt;bs3-button bs-style="default"&gt;（默认样式）Default&lt;/bs3-button&gt;
 
-    &lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
-    &lt;button bs-style="primary"&gt;（首选项）Primary&lt;/button&gt;
+    &lt;!-- Provides extra visual weight and identifies the primary action in a set of bs3-buttons --&gt;
+    &lt;bs3-button bs-style="primary"&gt;（首选项）Primary&lt;/bs3-button&gt;
 
     &lt;!-- Indicates a successful or positive action --&gt;
-    &lt;button bs-style="success"&gt;（成功）Success&lt;/button&gt;
+    &lt;bs3-button bs-style="success"&gt;（成功）Success&lt;/bs3-button&gt;
 
-    &lt;!-- Contextual button for informational alert messages --&gt;
-    &lt;button bs-style="info"&gt;（一般信息）Info&lt;/button&gt;
+    &lt;!-- Contextual bs3-button for informational alert messages --&gt;
+    &lt;bs3-button bs-style="info"&gt;（一般信息）Info&lt;/bs3-button&gt;
 
     &lt;!-- Indicates caution should be taken with this action --&gt;
-    &lt;button bs-style="warning"&gt;（警告）Warning&lt;/button&gt;
+    &lt;bs3-button bs-style="warning"&gt;（警告）Warning&lt;/bs3-button&gt;
 
     &lt;!-- Indicates a dangerous or potentially negative action --&gt;
-    &lt;button bs-style="danger"&gt;（危险）Danger&lt;/button&gt;
+    &lt;bs3-button bs-style="danger"&gt;（危险）Danger&lt;/bs3-button&gt;
 
-    &lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;
-    &lt;button bs-style="link"&gt;（链接）Link&lt;/button&gt;
+    &lt;!-- Deemphasize a bs3-button by making it look like a link while maintaining bs3-button behavior --&gt;
+    &lt;bs3-button bs-style="link"&gt;（链接）Link&lt;/bs3-button&gt;
         </code></pre>
     </section>
 
     <section>
-        <h4>2. bs-size</h4>
+        <h4>2.2 bs-size</h4>
         <p>尺寸大小</p>
-        <button bs-size="lg">（大按钮）Default button</button>
-        <button>（默认尺寸）Default button</button>
-        <button bs-size="sm">（小按钮）Default button</button>
-        <button bs-size="xs">（超小尺寸）Default button</button>
+        <bs3-button bs-size="lg">（大按钮）Default bs3-button</bs3-button>
+        <bs3-button>（默认尺寸）Default bs3-button</bs3-button>
+        <bs3-button bs-size="sm">（小按钮）Default bs3-button</bs3-button>
+        <bs3-button bs-size="xs">（超小尺寸）Default bs3-button</bs3-button>
 
 
         <pre><code class="html">
-    &lt;button bs-size="lg"&gt;（大按钮）Default button&lt;/button&gt;
+    &lt;bs3-button bs-size="lg"&gt;（大按钮）Default bs3-button&lt;/bs3-button&gt;
 
-    &lt;button&gt;（默认尺寸）Default button&lt;/button&gt;
+    &lt;bs3-button&gt;（默认尺寸）Default bs3-button&lt;/bs3-button&gt;
 
-    &lt;button bs-size="sm"&gt;（小按钮）Default button&lt;/button&gt;
+    &lt;bs3-button bs-size="sm"&gt;（小按钮）Default bs3-button&lt;/bs3-button&gt;
 
-    &lt;button bs-size="xs"&gt;（超小尺寸）Default button&lt;/button&gt;
+    &lt;bs3-button bs-size="xs"&gt;（超小尺寸）Default bs3-button&lt;/bs3-button&gt;
         </code></pre>
     </section>
-
-
 
 </div>

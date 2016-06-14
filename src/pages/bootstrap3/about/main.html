@@ -1,5 +1,9 @@
 <div>
-    <h2>欢迎</h2>
+    <div class="jumbotron">
+        <h1>Bootstrap 3.x 的 vue 组件</h1>
+        <p>使用fis3构建</p>
+    </div>
+
     <p>这里是基于 fis3 构建并基于 Bootstrap 3.x 的 vue 组件demo。</p>
 
     <div class="row">
@@ -16,6 +20,19 @@
     <div class="row">
         <div class="col-md-12">
             <a class="btn btn-success" v-link="{ path: '/button' }">Button</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p>这里有一些说明：</p>
+            <ul>
+                <li>我们的示例代码中，组件都是 <a href="http://vuejs.org/guide/components.html#Local-Registration" target="_blank">局部注册</a> 的，但实际中，您也可以在一个公共文件内，将某些组件定义为
+                    <a href="http://vuejs.org/guide/components.html#Registration" target="_blank">全局组件</a>。</li>
+                <li>为了更好的辨识，我们的示例统一以 <code>bs3-</code> 开头。当然，您也可以任意规则。对于自定义标签名字，Vue.js 不强制要求遵循 <a href="http://www.w3.org/TR/custom-elements/#concepts" target="_blank">W3C 规则</a>（小写，并且包含一个短杠），尽管遵循这个规则比较好。</li>
+            </ul>
         </div>
     </div>
 </div>
