@@ -3,36 +3,54 @@
     <h3>Button按钮</h3>
 
     <section>
-        <p>1. <code>bs-style</code>: 指定按钮的样式</p>
-        <button type="button" bs-style="default">（默认样式）Default</button>
-        <button type="button" bs-style="primary">（首选项）Primary</button>
-        <button type="button" bs-style="success">（成功）Success</button>
-        <button type="button" bs-style="info">（一般信息）Info</button>
-        <button type="button" bs-style="warning">（警告）Warning</button>
-        <button type="button" bs-style="danger">（危险）Danger</button>
-        <button type="button" bs-style="link">（链接）Link</button>
+        <h4>1. bs-style</h4>
+        <p>（颜色）样式，默认值为 <code>default</code></p>
+        <button bs-style="default">（默认样式）Default</button>
+        <button bs-style="primary">（首选项）Primary</button>
+        <button bs-style="success">（成功）Success</button>
+        <button bs-style="info">（一般信息）Info</button>
+        <button bs-style="warning">（警告）Warning</button>
+        <button bs-style="danger">（危险）Danger</button>
+        <button bs-style="link">（链接）Link</button>
 
         <pre><code class="html">
     &lt;!-- Standard button --&gt;
-    &lt;button type="button" bs-style="default"&gt;（默认样式）Default&lt;/button&gt;
+    &lt;button bs-style="default"&gt;（默认样式）Default&lt;/button&gt;
 
     &lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
-    &lt;button type="button" bs-style="primary"&gt;（首选项）Primary&lt;/button&gt;
+    &lt;button bs-style="primary"&gt;（首选项）Primary&lt;/button&gt;
 
     &lt;!-- Indicates a successful or positive action --&gt;
-    &lt;button type="button" bs-style="success"&gt;（成功）Success&lt;/button&gt;
+    &lt;button bs-style="success"&gt;（成功）Success&lt;/button&gt;
 
     &lt;!-- Contextual button for informational alert messages --&gt;
-    &lt;button type="button" bs-style="info"&gt;（一般信息）Info&lt;/button&gt;
+    &lt;button bs-style="info"&gt;（一般信息）Info&lt;/button&gt;
 
     &lt;!-- Indicates caution should be taken with this action --&gt;
-    &lt;button type="button" bs-style="warning"&gt;（警告）Warning&lt;/button&gt;
+    &lt;button bs-style="warning"&gt;（警告）Warning&lt;/button&gt;
 
     &lt;!-- Indicates a dangerous or potentially negative action --&gt;
-    &lt;button type="button" bs-style="danger"&gt;（危险）Danger&lt;/button&gt;
+    &lt;button bs-style="danger"&gt;（危险）Danger&lt;/button&gt;
 
     &lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;
-    &lt;button type="button" bs-style="link"&gt;（链接）Link&lt;/button&gt;
+    &lt;button bs-style="link"&gt;（链接）Link&lt;/button&gt;
+        </code></pre>
+    </section>
+
+    <section>
+        <h4>2. bs-size</h4>
+        <p>尺寸大小</p>
+        <button bs-size="lg">（大按钮）Default button</button>
+        <button>（默认尺寸）Default button</button>
+        <button bs-size="sm">（小按钮）Default button</button>
+        <button bs-size="xs">（超小尺寸）Default button</button>
+
+
+        <pre><code class="html">
+    &lt;button bs-size="lg"&gt;（大按钮）Default button&lt;/button&gt;
+    &lt;button&gt;（默认尺寸）Default button&lt;/button&gt;
+    &lt;button bs-size="sm"&gt;（小按钮）Default button&lt;/button&gt;
+    &lt;button bs-size="xs"&gt;（超小尺寸）Default button&lt;/button&gt;
         </code></pre>
     </section>
 
