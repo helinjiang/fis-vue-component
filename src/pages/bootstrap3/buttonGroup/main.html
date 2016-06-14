@@ -1,0 +1,131 @@
+<div>
+    <div class="back">
+        <a class="btn btn-link" v-link="{ path: '/about' }">返回首页</a>
+    </div>
+
+    <h2>Button按钮</h2>
+
+    <h3>1. 使用</h3>
+    <p>略</p>
+
+    <h3>2. 选项配置</h3>
+
+    <section>
+        <h4>2.1 bs-size</h4>
+        <p>按钮组大小，<code>String</code>，非必须，可选值为：</p>
+        <ul>
+            <li><code>（省略）</code>：默认值，默认大小不用设置</li>
+            <li><code>lg</code>：大按钮</li>
+            <li><code>sm</code>：小按钮</li>
+            <li><code>xs</code>：超小尺寸</li>
+        </ul>
+        <div class="bs-example">
+            <bs3-button-group bs-size="lg">
+                <bs3-button> left </bs3-button>
+                <bs3-button> center </bs3-button>
+                <bs3-button> right </bs3-button>
+            </bs3-button-group>
+
+            <bs3-button-group>
+                <bs3-button> left </bs3-button>
+                <bs3-button> center </bs3-button>
+                <bs3-button> right </bs3-button>
+            </bs3-button-group>
+
+            <bs3-button-group bs-size="sm">
+                <bs3-button> left </bs3-button>
+                <bs3-button> center </bs3-button>
+                <bs3-button> right </bs3-button>
+            </bs3-button-group>
+
+            <bs3-button-group bs-size="xs">
+                <bs3-button> left </bs3-button>
+                <bs3-button> center </bs3-button>
+                <bs3-button> right </bs3-button>
+            </bs3-button-group>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-button-group bs-size="lg"&gt;
+        &lt;bs3-button&gt; left &lt;/bs3-button&gt;
+        &lt;bs3-button&gt; center &lt;/bs3-button&gt;
+        &lt;bs3-button&gt; right &lt;/bs3-button&gt;
+    &lt;/bs3-button-group&gt;
+
+    &lt;bs3-button-group&gt;
+        &lt;bs3-button&gt; left &lt;/bs3-button&gt;
+        &lt;bs3-button&gt; center &lt;/bs3-button&gt;
+        &lt;bs3-button&gt; right &lt;/bs3-button&gt;
+    &lt;/bs3-button-group&gt;
+
+    &lt;bs3-button-group bs-size="sm"&gt;
+        &lt;bs3-button&gt; left &lt;/bs3-button&gt;
+        &lt;bs3-button&gt; center &lt;/bs3-button&gt;
+        &lt;bs3-button&gt; right &lt;/bs3-button&gt;
+    &lt;/bs3-button-group&gt;
+
+    &lt;bs3-button-group bs-size="xs"&gt;
+        &lt;bs3-button&gt; left &lt;/bs3-button&gt;
+        &lt;bs3-button&gt; center &lt;/bs3-button&gt;
+        &lt;bs3-button&gt; right &lt;/bs3-button&gt;
+    &lt;/bs3-button-group&gt;
+            </code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h4>2.2 align</h4>
+        <p>按钮组中按钮的排列方式，<code>String</code>，非必须，可选值为：</p>
+        <ul>
+            <li><code>（省略）</code>：默认值，横向排列</li>
+            <li><code>vertical</code>：垂直排列</li>
+            <li><code>justified</code>：两端对齐，但如果按钮是 <code>&lt;button&gt;</code>，则需要 <a
+                    href="http://v3.bootcss.com/components/#btn-groups" target="_blank">特殊处理下</a>，请看demo</li>
+        </ul>
+        <div class="bs-example">
+            <bs3-button-group>
+                <bs3-button> left </bs3-button>
+                <bs3-button> center </bs3-button>
+                <bs3-button >right </bs3-button>
+            </bs3-button-group>
+
+            <bs3-button-group align="vertical">
+                <bs3-button> left </bs3-button>
+                <bs3-button> center </bs3-button>
+                <bs3-button >right </bs3-button>
+            </bs3-button-group>
+
+            <bs3-button-group align="justified">
+                <bs3-button-group><bs3-button> left </bs3-button></bs3-button-group>
+                <bs3-button-group><bs3-button> center </bs3-button></bs3-button-group>
+                <bs3-button-group><bs3-button >right </bs3-button></bs3-button-group>
+            </bs3-button-group>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-button-group&gt;
+        &lt;bs3-button&gt; left &lt;/bs3-button&gt;
+        &lt;bs3-button&gt; center &lt;/bs3-button&gt;
+        &lt;bs3-button &gt;right &lt;/bs3-button&gt;
+    &lt;/bs3-button-group&gt;
+
+    &lt;bs3-button-group align="vertical"&gt;
+        &lt;bs3-button&gt; left &lt;/bs3-button&gt;
+        &lt;bs3-button&gt; center &lt;/bs3-button&gt;
+        &lt;bs3-button &gt;right &lt;/bs3-button&gt;
+    &lt;/bs3-button-group&gt;
+
+    &lt;bs3-button-group align="justified"&gt;
+        &lt;bs3-button-group&gt;&lt;bs3-button&gt; left &lt;/bs3-button&gt;&lt;/bs3-button-group&gt;
+        &lt;bs3-button-group&gt;&lt;bs3-button&gt; center &lt;/bs3-button&gt;&lt;/bs3-button-group&gt;
+        &lt;bs3-button-group&gt;&lt;bs3-button &gt;right &lt;/bs3-button&gt;&lt;/bs3-button-group&gt;
+    &lt;/bs3-button-group&gt;
+            </code></pre>
+        </div>
+    </section>
+
+
+
+</div>
