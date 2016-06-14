@@ -22,6 +22,10 @@ export function configRouter(router) {
             component: require('./panel')
         },
 
+        '/alert': {
+            component: require('./alert')
+        },
+
         '*': {
             component: require('./about')
         }

@@ -1,0 +1,43 @@
+<div>
+    <div class="back">
+        <a class="btn btn-link" v-link="{ path: '/about' }">返回首页</a>
+    </div>
+
+    <h2>Alert 警告框</h2>
+
+    <h3>1. 使用</h3>
+    <p>略</p>
+
+    <h3>2. 选项配置</h3>
+
+    <section>
+        <h4>2.1 bs-style</h4>
+        <p>（颜色）样式，<code>String</code>，非必须，可选值为：</p>
+        <ul>
+            <li><code>success</code>：成功</li>
+            <li><code>info</code>：一般信息</li>
+            <li><code>warning</code>：警告</li>
+            <li><code>danger</code>：危险</li>
+        </ul>
+
+        <div class="bs-example">
+            <bs3-alert bs-style="success">（成功）Success</bs3-alert>
+            <bs3-alert bs-style="info">（一般信息）Info</bs3-alert>
+            <bs3-alert bs-style="warning">（警告）Warning</bs3-alert>
+            <bs3-alert bs-style="danger">（危险）Danger</bs3-alert>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-alert bs-style="success"&gt;（成功）Success&lt;/bs3-alert&gt;
+
+    &lt;bs3-alert bs-style="info"&gt;（一般信息）Info&lt;/bs3-alert&gt;
+
+    &lt;bs3-alert bs-style="warning"&gt;（警告）Warning&lt;/bs3-alert&gt;
+
+    &lt;bs3-alert bs-style="danger"&gt;（危险）Danger&lt;/bs3-alert&gt;
+            </code></pre>
+        </div>
+    </section>
+
+</div>
