@@ -26,6 +26,14 @@ export function configRouter(router) {
             component: require('./alert')
         },
 
+        '/row': {
+            component: require('./row')
+        },
+
+        '/col': {
+            component: require('./col')
+        },
+
         '*': {
             component: require('./about')
         }

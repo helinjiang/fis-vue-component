@@ -1,0 +1,45 @@
+<div>
+    <div class="back">
+        <a class="btn btn-link" v-link="{ path: '/about' }">返回首页</a>
+    </div>
+
+    <h2>Row 和 Col 栅格系统</h2>
+
+    <h3>1. 使用</h3>
+    <p>略</p>
+
+    <h3>2. 选项配置</h3>
+
+    <section>
+        <h4>2.1 col 的四种属性</h4>
+        <p>这四种属性值均为 <code>Number</code> 类型，必须，可选值从 <code>1</code> 到 <code>12</code>。属性说明如下：</p>
+        <ul>
+            <li><code>lg</code>：大屏幕 大桌面显示器 (≥1200px)</li>
+            <li><code>md</code>：中等屏幕 桌面显示器 (≥992px)</li>
+            <li><code>sm</code>：小屏幕 平板 (≥768px)</li>
+            <li><code>xs</code>：超小屏幕 手机 (<768px)</li>
+        </ul>
+
+        <div class="bs-example">
+            <bs3-row class="show-grid">
+                <bs3-col xs="12" sm="6" md="4" lg="3">栅格系统1</bs3-col>
+                <bs3-col xs="12" sm="6" md="4" lg="3">栅格系统2</bs3-col>
+                <bs3-col xs="12" sm="6" md="4" lg="3">栅格系统3</bs3-col>
+                <bs3-col xs="12" sm="6" md="4" lg="3">栅格系统4</bs3-col>
+            </bs3-row>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-row&gt;
+        &lt;bs3-col xs="12" sm="6" md="4" lg="3"&gt;栅格系统1&lt;/bs3-col&gt;
+        &lt;bs3-col xs="12" sm="6" md="4" lg="3"&gt;栅格系统2&lt;/bs3-col&gt;
+        &lt;bs3-col xs="12" sm="6" md="4" lg="3"&gt;栅格系统3&lt;/bs3-col&gt;
+        &lt;bs3-col xs="12" sm="6" md="4" lg="3"&gt;栅格系统4&lt;/bs3-col&gt;
+    &lt;/bs3-row&gt;
+            </code></pre>
+        </div>
+    </section>
+
+
+</div>
