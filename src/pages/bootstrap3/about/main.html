@@ -1,4 +1,21 @@
 <div>
     <h2>欢迎</h2>
     <p>这里是基于 fis3 构建并基于 Bootstrap 3.x 的 vue 组件demo。</p>
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- use v-link directive for navigation. -->
+            <a class="btn btn-info" v-link="{ path: '/foo' }">Go to Foo</a>
+            <a class="btn btn-info" v-link="{ path: '/bar' }">Go to Bar</a>
+            <a class="btn btn-info" v-link="{ path: '/404' }">Go to 404</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12">
+            <a class="btn btn-success" v-link="{ path: '/button' }">Button</a>
+        </div>
+    </div>
 </div>
