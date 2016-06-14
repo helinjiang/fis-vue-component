@@ -45,7 +45,7 @@ noMod.forEach(function (item) {
     fis.match(item, {isMod: false});
 });
 
-fis.match('/{pages,modules,common}/**.js', {
+fis.match('/{pages,modules,components,common}/**.js', {
     parser: fis.plugin('babel')
 })
     .match('/common/lib/**.js', {
