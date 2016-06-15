@@ -201,4 +201,38 @@
         </div>
     </section>
 
+    <section>
+        <h4>2.7 嵌套使用</h4>
+        <p>想要把下拉菜单混合到一系列按钮中，只须把它们放入到 ButtonGroup 中即可</p>
+        <div class="bs-example">
+            <bs3-button-group>
+                <bs3-button>1</bs3-button>
+                <bs3-button>2</bs3-button>
+                <bs3-dropdown-button>
+                    <span>下拉框</span>
+                    <bs3-dropdown-menu slot="dropdown-menu">
+                        <bs3-menu-item>Action1</bs3-menu-item>
+                        <bs3-menu-item>Action2</bs3-menu-item>
+                    </bs3-dropdown-menu>
+                </bs3-dropdown-button>
+            </bs3-button-group>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-button-group&gt;
+        &lt;bs3-button&gt;1&lt;/bs3-button&gt;
+        &lt;bs3-button&gt;2&lt;/bs3-button&gt;
+        &lt;bs3-dropdown-button&gt;
+            &lt;span&gt;下拉框&lt;/span&gt;
+            &lt;bs3-dropdown-menu slot="dropdown-menu"&gt;
+                &lt;bs3-menu-item&gt;Action1&lt;/bs3-menu-item&gt;
+                &lt;bs3-menu-item&gt;Action2&lt;/bs3-menu-item&gt;
+            &lt;/bs3-dropdown-menu&gt;
+        &lt;/bs3-dropdown-button&gt;
+    &lt;/bs3-button-group&gt;
+            </code></pre>
+        </div>
+    </section>
+
 </div>

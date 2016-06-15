@@ -1,7 +1,7 @@
 /**
  * buttonGroup 按钮组
  *
- * @param bsSize  xs,sm,lg
+ * @param size  xs,sm,lg
  * @param algin vertical,justified
  *
  */
@@ -9,7 +9,7 @@
 export default {
     template: __inline('main.html'),
     props: {
-        'bsSize': {
+        'size': {
             type: String
         },
         'align': {
@@ -23,7 +23,7 @@ export default {
     },
     computed: {
         bSize: function () {
-            return this.bsSize || null;
+            return this.size || null;
         },
         bAlign: function () {
             return this.align || null;
