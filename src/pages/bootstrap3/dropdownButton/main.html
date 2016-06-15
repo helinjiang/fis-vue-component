@@ -3,7 +3,7 @@
         <a class="btn btn-link" v-link="{ path: '/about' }">返回首页</a>
     </div>
 
-    <h2>DropdownButton 下拉按钮</h2>
+    <h2>DropdownButton 按钮式下拉菜单</h2>
 
     <h3>1. 使用</h3>
     <p>略</p>
@@ -76,7 +76,7 @@
 
         <div class="bs-example">
             <bs3-dropdown-button v-for="curStyle in styleList" :bs-style="curStyle" >
-                <span>下拉框{{curStyle}} <i class="caret"></i></span>
+                <span>下拉框{{curStyle}}</span>
                 <bs3-dropdown-menu slot="dropdown-menu">
                     <bs3-menu-item>Action</bs3-menu-item>
                 </bs3-dropdown-menu>
@@ -107,7 +107,7 @@
 
         <div class="bs-example">
             <bs3-dropdown-button v-for="curSize in sizeList" :size="curSize" >
-                <span>下拉框{{curSize}} <i class="caret"></i></span>
+                <span>下拉框{{curSize}}</span>
                 <bs3-dropdown-menu slot="dropdown-menu">
                     <bs3-menu-item>Action</bs3-menu-item>
                 </bs3-dropdown-menu>
@@ -177,11 +177,11 @@
     </section>
 
     <section>
-        <h4>2.6 分裂式</h4>
-        <p>向上弹出菜单还是向下弹出菜单，二选一，<code>Boolean</code>，默认为 <code>dropdown: true</code>。</p>
+        <h4>2.6 split</h4>
+        <p>是否为分裂式按钮下拉菜单，<code>Boolean</code>，非必须。</p>
 
         <div class="bs-example">
-            <bs3-dropdown-button split >
+            <bs3-dropdown-button split>
                 <span>下拉框</span>
                 <bs3-dropdown-menu slot="dropdown-menu">
                     <bs3-menu-item>Action</bs3-menu-item>
