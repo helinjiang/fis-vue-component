@@ -42,6 +42,10 @@ export function configRouter(router) {
             component: require('./nav')
         },
 
+        '/tab': {
+            component: require('./tab')
+        },
+
         '*': {
             component: require('./about')
         }

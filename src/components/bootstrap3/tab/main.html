@@ -1,0 +1,12 @@
+<div>
+    <my-nav is="nav">
+        <nav-item v-for='item in tabList'
+                  :class="{'active':activeIndex==$index,'disabled':disabledList.indexOf($index)>-1}"
+                  @click='switchTab($index)'>
+            {{item.title}}
+        </nav-item>
+    </my-nav>
+    <div class="tab-content">
+        <slot></slot>
+    </div>
+</div>

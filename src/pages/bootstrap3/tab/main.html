@@ -1,0 +1,57 @@
+<div>
+    <div class="back">
+        <a class="btn btn-link" v-link="{ path: '/about' }">返回首页</a>
+    </div>
+
+    <h2>Tab 选项卡</h2>
+
+    <h3>1. 使用</h3>
+    <p>略</p>
+
+    <h3>2. 选项配置</h3>
+
+    <section>
+        <h4>2.1 bs-style</h4>
+        <p>样式，<code>String</code>，非必须，可选值为：</p>
+        <ul>
+            <li><code>tabs</code>：默认值，标签页</li>
+            <li><code>pills</code>：胶囊式标签页</li>
+        </ul>
+
+        <p>Tab 导航中每一项菜单为 tabItem 组件。tabItem 组件可选参数为：</p>
+        <ul>
+            <li><code>active</code>：<code>Boolean</code> 类型，非必须，是否为激活的菜单项</li>
+            <li><code>disabled</code>：<code>Boolean</code> 类型，非必须，是否为禁用的菜单项</li>
+            <li><code>dropdown</code>：<code>Boolean</code> 类型，非必须，是否为下拉菜单</li>
+            <li><code>href</code>：<code>String</code> 类型，非必须，跳转链接的href</li>
+            <li><code>target</code>：<code>String</code> 类型，非必须，跳转链接的target</li>
+        </ul>
+
+        <div class="bs-example">
+            <bs3-tab>
+                <bs3-tab-item title="tab1">123</bs3-tab-item>
+                <bs3-tab-item title="tab2">456</bs3-tab-item>
+                <bs3-tab-item title="tab3" disabled>789</bs3-tab-item>
+            </bs3-tab>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+     &lt;bs3-nav&gt;
+        &lt;bs3-nav-item active&gt;active link1&lt;/bs3-nav-item&gt;
+        &lt;bs3-nav-item&gt;normal link&lt;/bs3-nav-item&gt;
+        &lt;bs3-nav-item disabled&gt;disabled link&lt;/bs3-nav-item&gt;
+        &lt;bs3-nav-item href="http://qq.com" target="_blank"&gt;link to qq.com&lt;/bs3-nav-item&gt;
+    &lt;/bs3-nav&gt;
+
+    &lt;bs3-nav bs-style="pills"&gt;
+        &lt;bs3-nav-item active&gt;link1&lt;/bs3-nav-item&gt;
+        &lt;bs3-nav-item&gt;link2&lt;/bs3-nav-item&gt;
+        &lt;bs3-nav-item&gt;link3&lt;/bs3-nav-item&gt;
+    &lt;/bs3-nav&gt;
+            </code></pre>
+        </div>
+    </section>
+
+
+</div>
