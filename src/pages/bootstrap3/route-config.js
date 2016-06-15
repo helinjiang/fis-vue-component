@@ -38,6 +38,10 @@ export function configRouter(router) {
             component: require('./dropdownButton')
         },
 
+        '/nav': {
+            component: require('./nav')
+        },
+
         '*': {
             component: require('./about')
         }

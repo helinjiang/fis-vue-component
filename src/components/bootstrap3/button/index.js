@@ -1,10 +1,10 @@
 /**
  * button 按钮
  *
- * @param type button,submit
- * @param bsStyle default,primary,success,info,warning,danger,link
- * @param size lg,xs,sm
- * @param disabled
+ * @param {String} type button,submit
+ * @param {String} bsStyle default,primary,success,info,warning,danger,link
+ * @param {String} size lg,xs,sm
+ * @param {Boolean} disabled
  *
  */
 

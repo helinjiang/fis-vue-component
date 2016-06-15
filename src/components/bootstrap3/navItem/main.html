@@ -1,0 +1,21 @@
+<li role="presentation" :class="{'active':active,'disabled':disabled,'dropdown':dropdown}">
+    <anchor :href="href"
+            :target="target"
+            :disabled="disabled"
+            v-if="!dropdown">
+        <slot></slot>
+    </anchor>
+
+    <a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="javascript:;"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       v-if="dropdown"
+    >
+        <slot></slot> <span class="caret"></span>
+    </a>
+
+    <slot name="dropdown-menu" v-if="dropdown"></slot>
+</li>
