@@ -34,6 +34,10 @@ export function configRouter(router) {
             component: require('./col')
         },
 
+        '/dropdownButton': {
+            component: require('./dropdownButton')
+        },
+
         '*': {
             component: require('./about')
         }

@@ -2,6 +2,9 @@ import Vue from '/common/lib/vue'
 import VueRouter from '/common/lib/vue-router'
 import {configRouter} from './route-config'
 
+// Only Test
+window.Vue = Vue;
+
 export default {
     init() {
         // install router

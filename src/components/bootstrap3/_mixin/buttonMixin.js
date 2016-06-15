@@ -2,13 +2,13 @@
  * 按钮mixin
  */
 
-module.exports = {
+export default {
   props:{
     'bsStyle':{
       type:String,
       default:"default"
     },
-    'bsSize':{
+    'size':{
       type:String,
       default:'md'
     }

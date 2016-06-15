@@ -1,0 +1,10 @@
+<li :class="{'disabled':disabled,'dropdown-header':header,'divider':divider}">
+    <anchor :href="href"
+            :target="target"
+            :disabled="disabled"
+            v-if="!header && !divider">
+        <slot></slot>
+    </anchor>
+
+    <slot v-if="header && !divider"></slot>
+</li>

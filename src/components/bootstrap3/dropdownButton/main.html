@@ -1,0 +1,36 @@
+<div class="dropdown-button" @click="toggleOpen">
+    <button-group :class="classes">
+        <template v-if="split">
+            <button :bs-style="bsStyle"
+                    :size="size"
+                    :disabled="disabled">
+                <slot></slot>
+            </button>
+            <button class="dropdown-toggle"
+                    :bs-style="bsStyle"
+                    :size="size"
+                    :disabled="disabled"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+        </template>
+
+        <template v-if="!split">
+            <button class="dropdown-toggle"
+                    :bs-style="bsStyle"
+                    :size="size"
+                    :disabled="disabled"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                <div><slot></slot><i class="caret"></i></div>
+            </button>
+        </template>
+
+        <slot name="dropdown-menu"></slot>
+
+    </button-group>
+</div>

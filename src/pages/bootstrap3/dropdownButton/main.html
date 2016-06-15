@@ -1,0 +1,204 @@
+<div>
+    <div class="back">
+        <a class="btn btn-link" v-link="{ path: '/about' }">返回首页</a>
+    </div>
+
+    <h2>DropdownButton 下拉按钮</h2>
+
+    <h3>1. 使用</h3>
+    <p>略</p>
+
+    <h3>2. 选项配置</h3>
+
+    <section>
+        <h4>2.1 slot、dropdownMenu 和 menuItem</h4>
+        <p>dropdownButton 下拉按钮组件包含两块块 <code>slot</code>，分别是：</p>
+        <ul>
+            <li><code>（省略）</code>：不设置 slot 的默认为按钮中的内容</li>
+            <li><code>dropdown-menu</code>：下拉菜单区域</li>
+        </ul>
+
+        <p>下拉菜单采用 dropdownMenu 组件，其中包含的每一项菜单为 menuItem 组件。menuItem 组件可选参数为：</p>
+        <ul>
+            <li><code>header</code>：<code>Boolean</code> 类型，非必须，是否为下拉菜单的标题</li>
+            <li><code>divider</code>：<code>Boolean</code> 类型，非必须，是否为下拉菜单的分割线</li>
+            <li><code>disabled</code>：<code>Boolean</code> 类型，非必须，是否为禁用的菜单项</li>
+            <li><code>href</code>：<code>String</code> 类型，非必须，跳转链接的href</li>
+            <li><code>target</code>：<code>String</code> 类型，非必须，跳转链接的target</li>
+        </ul>
+
+        <div class="bs-example">
+            <bs3-dropdown-button>
+                <span>下拉框</span>
+                <bs3-dropdown-menu slot="dropdown-menu">
+                    <bs3-menu-item header>1. 超链接</bs3-menu-item>
+                    <bs3-menu-item href="http://www.qq.com" target="_blank">GO QQ.COM</bs3-menu-item>
+                    <bs3-menu-item divider></bs3-menu-item>
+                    <bs3-menu-item header>2. 普通行为</bs3-menu-item>
+                    <bs3-menu-item @click="testAction">Action</bs3-menu-item>
+                    <bs3-menu-item disabled>Disabled Action</bs3-menu-item>
+                    <bs3-menu-item divider></bs3-menu-item>
+                    <bs3-menu-item>End link</bs3-menu-item>
+                </bs3-dropdown-menu>
+            </bs3-dropdown-button>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-dropdown-button&gt;
+        &lt;span&gt;下拉框&lt;/span&gt;
+        &lt;bs3-dropdown-menu slot="dropdown-menu"&gt;
+            &lt;bs3-menu-item header&gt;1. 超链接&lt;/bs3-menu-item&gt;
+            &lt;bs3-menu-item href="http://www.qq.com" target="_blank"&gt;GO QQ.COM&lt;/bs3-menu-item&gt;
+            &lt;bs3-menu-item divider&gt;&lt;/bs3-menu-item&gt;
+            &lt;bs3-menu-item header&gt;2. 普通行为&lt;/bs3-menu-item&gt;
+            &lt;bs3-menu-item @click="testAction"&gt;Action&lt;/bs3-menu-item&gt;
+            &lt;bs3-menu-item disabled&gt;Disabled Action&lt;/bs3-menu-item&gt;
+            &lt;bs3-menu-item divider&gt;&lt;/bs3-menu-item&gt;
+            &lt;bs3-menu-item&gt;End link&lt;/bs3-menu-item&gt;
+        &lt;/bs3-dropdown-menu&gt;
+    &lt;/bs3-dropdown-button&gt;
+            </code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h4>2.2 bs-style</h4>
+        <p>（颜色）样式，<code>String</code>，非必须，可选值为：</p>
+        <ul>
+            <li><code>default</code>：默认值，默认样式</li>
+            <li><code>primary</code>：首选项</li>
+            <li><code>success</code>：成功</li>
+            <li><code>info</code>：一般信息</li>
+            <li><code>warning</code>：警告</li>
+            <li><code>danger</code>：危险</li>
+        </ul>
+
+        <div class="bs-example">
+            <bs3-dropdown-button v-for="curStyle in styleList" :bs-style="curStyle" >
+                <span>下拉框{{curStyle}} <i class="caret"></i></span>
+                <bs3-dropdown-menu slot="dropdown-menu">
+                    <bs3-menu-item>Action</bs3-menu-item>
+                </bs3-dropdown-menu>
+            </bs3-dropdown-button>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-dropdown-button bs-style="success"&gt;
+        &lt;span&gt;下拉框&lt;/span&gt;
+        &lt;bs3-dropdown-menu slot="dropdown-menu"&gt;
+            &lt;bs3-menu-item&gt;Action&lt;/bs3-menu-item&gt;
+        &lt;/bs3-dropdown-menu&gt;
+    &lt;/bs3-dropdown-button&gt;
+            </code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h4>2.3 size</h4>
+        <p>按钮大小，<code>String</code>，非必须，可选值为：</p>
+        <ul>
+            <li><code>（省略）</code>：默认值，默认大小不用设置</li>
+            <li><code>lg</code>：大按钮</li>
+            <li><code>sm</code>：小按钮</li>
+            <li><code>xs</code>：超小尺寸</li>
+        </ul>
+
+        <div class="bs-example">
+            <bs3-dropdown-button v-for="curSize in sizeList" :size="curSize" >
+                <span>下拉框{{curSize}} <i class="caret"></i></span>
+                <bs3-dropdown-menu slot="dropdown-menu">
+                    <bs3-menu-item>Action</bs3-menu-item>
+                </bs3-dropdown-menu>
+            </bs3-dropdown-button>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-dropdown-button size="lg"&gt;
+        &lt;span&gt;下拉框&lt;/span&gt;
+        &lt;bs3-dropdown-menu slot="dropdown-menu"&gt;
+            &lt;bs3-menu-item&gt;Action&lt;/bs3-menu-item&gt;
+        &lt;/bs3-dropdown-menu&gt;
+    &lt;/bs3-dropdown-button&gt;
+            </code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h4>2.4 disabled</h4>
+        <p>是否可点击，<code>Boolean</code>，默认为 <code>false</code>。</p>
+
+        <div class="bs-example">
+            <bs3-dropdown-button disabled>
+                <span>下拉框</span>
+                <bs3-dropdown-menu slot="dropdown-menu">
+                    <bs3-menu-item>Action</bs3-menu-item>
+                </bs3-dropdown-menu>
+            </bs3-dropdown-button>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-dropdown-button disabled&gt;
+        &lt;span&gt;下拉框&lt;/span&gt;
+        &lt;bs3-dropdown-menu slot="dropdown-menu"&gt;
+            &lt;bs3-menu-item&gt;Action&lt;/bs3-menu-item&gt;
+        &lt;/bs3-dropdown-menu&gt;
+    &lt;/bs3-dropdown-button&gt;
+            </code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h4>2.5 dropup 和 dropdown</h4>
+        <p>向上弹出菜单还是向下弹出菜单，二选一，<code>Boolean</code>，默认为 <code>dropdown: true</code>。</p>
+
+        <div class="bs-example">
+            <bs3-dropdown-button dropup>
+                <span>下拉框</span>
+                <bs3-dropdown-menu slot="dropdown-menu">
+                    <bs3-menu-item>Action</bs3-menu-item>
+                </bs3-dropdown-menu>
+            </bs3-dropdown-button>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-dropdown-button dropup&gt;
+        &lt;span&gt;下拉框&lt;/span&gt;
+        &lt;bs3-dropdown-menu slot="dropdown-menu"&gt;
+            &lt;bs3-menu-item&gt;Action&lt;/bs3-menu-item&gt;
+        &lt;/bs3-dropdown-menu&gt;
+    &lt;/bs3-dropdown-button&gt;
+            </code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h4>2.6 分裂式</h4>
+        <p>向上弹出菜单还是向下弹出菜单，二选一，<code>Boolean</code>，默认为 <code>dropdown: true</code>。</p>
+
+        <div class="bs-example">
+            <bs3-dropdown-button split >
+                <span>下拉框</span>
+                <bs3-dropdown-menu slot="dropdown-menu">
+                    <bs3-menu-item>Action</bs3-menu-item>
+                </bs3-dropdown-menu>
+            </bs3-dropdown-button>
+        </div>
+
+        <div class="highlight">
+            <pre><code class="html">
+    &lt;bs3-dropdown-button split&gt;
+        &lt;span&gt;下拉框&lt;/span&gt;
+        &lt;bs3-dropdown-menu slot="dropdown-menu"&gt;
+            &lt;bs3-menu-item&gt;Action&lt;/bs3-menu-item&gt;
+        &lt;/bs3-dropdown-menu&gt;
+    &lt;/bs3-dropdown-button&gt;
+            </code></pre>
+        </div>
+    </section>
+
+</div>
