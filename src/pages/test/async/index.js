@@ -1,20 +1,14 @@
-
 export default {
     template: __inline('main.html'),
     components: {
-        asyncPanel: (resolve)=>{
-            require(['/components/test/async/asyncPanel'], function (main) {
-                console.log('=========main==========', main);
-                resolve(main);
-            });
+        asyncPanel: (resolve)=> {
+            setTimeout(()=> {
+                console.log('---begin---');
+                require(['/components/test/async/asyncPanel'], function (main) {
+                    console.log('=========main==========', main);
+                    resolve(main);
+                });
+            }, 3000);
         }
-    },
-    ready: function () {
-        console.log('--about--ready');
-        // setTimeout(()=> {
-        //     require(['/components/bootstrap3/buttonAsync'], function (main) {
-        //         console.log('=========main==========', main);
-        //     });
-        // }, 3000);
     }
 };
