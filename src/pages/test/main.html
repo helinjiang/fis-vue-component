@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>组件TEST</title>
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.4.0/styles/github.min.css">
+    <link rel="stylesheet" href="./main.scss">
+
+</head>
+
+<body>
+
+<div id="app" class="container">
+    <div class="row">
+        <div class="col-md-12"><router-view></router-view></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/static/lib/jquery.min.js"></script><!--ignore-->
+<script type="text/javascript" src="/static/lib/mod.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.4.0/highlight.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    require('./main').init();
+</script>
+
+</body>
+</html>
+
